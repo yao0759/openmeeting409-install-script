@@ -29,6 +29,11 @@ apt -y --force-yes install autoconf automake build-essential libass-dev libfreet
 apt install libmp3lame-dev -y
 apt install libvpx-dev -y 
 
+
+mkdir /opt/red5409
+cp apache-openmeetings-4.0.9.tar.gz /opt/red5409
+cp mysql-connector-java-5.1.47.jar /opt/
+cp red5-ubdeb2 /etc/init.d/
 # copy some file to home diretory,because offical bash script useless
 cp -r ffmpeg_sources ~
 cd ~/ffmpeg_sources
@@ -41,10 +46,7 @@ apt install mariadb-server
 /etc/init.d/mysql start
 
 
-mkdir /opt/red5409
-cp apache-openmeetings-4.0.9.tar.gz /opt/red5409
-cp mysql-connector-java-5.1.47.jar /opt/
-cp red5-ubdeb2 /etc/init.d/
+
 cd /opt/red5409
 
 tar xzvf apache-openmeetings-4.0.9.tar.gz
